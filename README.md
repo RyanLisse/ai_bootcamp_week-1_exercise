@@ -46,23 +46,34 @@ Before installing project dependencies, it's recommended to set up a Python virt
 
    This command installs all the necessary packages as specified in the `requirements.txt` file, ensuring that you have the right versions needed for the project.
 
+## Project Structure
+Below is the file and folder structure of the AI Chef Experience project:
+
+
+```
+ai_bootcamp_weekend_exercise
+├── .venv/
+├── chefs/
+│   ├── italian_chef.py
+│   └── surinamese_chef.py
+├── utils/
+│   ├── base_chef.py
+│   └── chef_interface.py
+├── .gitignore
+├── main.py
+├── README.md
+└── requirements.txt
+```
+- `ai_chefs/`: Contains AI chef personalities and their functions.
+- `utils/`: Contains utility functions and classes, such as base_chef and the chef_interface.
+- `main.py`: The main application entry point.
+- `requirements.txt`: Project dependencies.
+- `README.md`: Project documentation.
+
+
 ## Usage
 
 1. Run the `main.py` script.
 2. Select the desired AI chef personality.
 3. Choose the input type: "ingredients", "dish", or "recipe".
 4. Follow the prompts and interact with the AI chef.
-
-## Example
-👨‍🍳 Welcome to the AI Chef Experience, where flavors meet technology!
-Select your chef:
-
-🇸🇷 Surinamese Chef
-🇮🇹 Italian Chef 🔢 Enter the number of your choice: 2
-What culinary adventure can I assist you with today?
-A. 🥘 Provide a list of ingredients to suggest a dish.
-B. 📖 Provide a recipe for a specific dish.
-C. 🍝 Provide a recipe for me to critique.
-👉 Enter your choice: B
-
-🍽️ Enter the name of the dish: Carbonara
