@@ -59,15 +59,15 @@ Before installing project dependencies, it's recommended to set up a Python virt
 ## Project Structure
 Below is the file and folder structure of the AI Chef Experience project:
 
-
 ```
 ai_bootcamp_weekend_exercise
 ├── .venv/
 ├── chefs/
 │   ├── brazilian_chef.py
+│   ├── dutch_chef.py
 │   ├── italian_chef.py
+│   └── jamaica_chef.py
 │   └── surinamese_chef.py
-│   └── Jamaica_chef.py
 ├── utils/
 │   ├── base_chef.py
 │   └── chef_interface.py
