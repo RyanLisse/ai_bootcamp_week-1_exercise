@@ -54,6 +54,7 @@ Below is the file and folder structure of the AI Chef Experience project:
 ai_bootcamp_weekend_exercise
 ├── .venv/
 ├── chefs/
+│   ├── brazilian_chef.py
 │   ├── italian_chef.py
 │   └── surinamese_chef.py
 ├── utils/
