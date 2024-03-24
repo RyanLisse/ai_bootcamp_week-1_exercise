@@ -22,3 +22,9 @@ G
 ..idea/inspectionProfiles/profiles_settings.xml,1/e/1e9075f5bf079c01ef2c910709e91a497d262080
 A
 add_a_new_chef.md,a/f/af1bc205211eafb19035e9e314d4b7d6bfd8ea82
+E
+chefs/jamaica_chef.py,e/4/e4b86f3334c288c8491dca46507bf5bdc469ee21
+E
+chefs/Jamaica_chef.py,8/5/85177dca6fc76765dc964c772e30bac43c37e7c5
+G
+chefs/brazilian_chef.py,a/8/a862070afd54c8332699f93e4f602d5fc3943a52

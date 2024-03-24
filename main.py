@@ -1,20 +1,20 @@
+from chefs.jamaica_chef import JamaicaChef
 from chefs.surinamese_chef import SurinameseChef
 from chefs.italian_chef import ItalianChef
-from chefs.jamaica_chef import JamaicaChef
 from chefs.brazilian_chef import BrazilianChef
 from chefs.dutch_chef import DutchChef
 
 chef_dict = {
-    "1": {"class": SurinameseChef, "description": "Surinamese Chef"},
-    "2": {"class": ItalianChef, "description": "Italian Chef"},
-    "3": {"class": JamaicaChef, "description": "Jamaican Chef"},
-    "4": {"class": BrazilianChef, "description": "Brazilian Chef"},
-    "5": {"class": DutchChef, "description": "Dutch Chef"}
+    "1": {"class": SurinameseChef, "description": "🇸🇷 Surinamese Chef"},
+    "2": {"class": ItalianChef, "description": "🇮🇹 Italian Chef"},
+    "3": {"class": JamaicaChef, "description": "🇯🇲 Jamaican Chef"},
+    "4": {"class": BrazilianChef, "description": "🇧🇷 Brazilian Chef"},
+    "5": {"class": DutchChef, "description": "🇳🇱 Dutch Chef"}
 
 }
 
-def get_chef(choice):
 
+def get_chef(choice):
     chef_info = chef_dict.get(choice)
     if chef_info:
         return chef_info["class"]()
@@ -31,6 +31,7 @@ def get_chef(choice):
     else:
         return None
 
+
 def main():
     print("👨‍🍳 Welcome to the AI Chef Experience, where flavors meet technology!")
     print("Select your chef:")
@@ -43,13 +44,6 @@ def main():
         chef = get_chef(choice)
         if chef:
             break
-
-    print("1. 🇸🇷 Surinamese Chef")
-    print("2. 🇮🇹 Italian Chef")
-    print("3. 🇯🇲 Jamaican Chef")
-    print("4. 🇧🇷 Brazilian Chef")
-    print("5. 🇳🇱 Dutch Chef")    
-    choice = input("🔢 Enter the number of your choice: ")
 
     chef = get_chef(choice)
     if chef is None:
@@ -74,6 +68,7 @@ def main():
             chef.response("recipe", recipe)
     else:
         print("❌ Invalid input. Let's try this again, shall we?")
+
 
 if __name__ == "__main__":
     main()
