@@ -45,6 +45,7 @@ Before installing project dependencies, it's recommended to set up a Python virt
    pip install -r requirements.txt
    ```
 
+
    This command installs all the necessary packages as specified in the `requirements.txt` file, ensuring that you have the right versions needed for the project.
   
    pip freeze > requirements.txt to save the state environment
