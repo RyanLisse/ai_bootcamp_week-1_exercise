@@ -1,5 +1,6 @@
 from chefs.surinamese_chef import SurinameseChef
 from chefs.italian_chef import ItalianChef
+from chefs.Jamaica_chef import JamaicaChef
 
 
 def get_chef(choice):
@@ -7,6 +8,8 @@ def get_chef(choice):
         return SurinameseChef()
     elif choice == "2":
         return ItalianChef()
+    elif choice == "3":
+        return JamaicaChef()
     else:
         return None
 
@@ -16,6 +19,7 @@ def main():
     print("Select your chef:")
     print("1. 🇸🇷 Surinamese Chef")
     print("2. 🇮🇹 Italian Chef")
+    print("3. 🇯🇲 Jamaican Chef")
     choice = input("🔢 Enter the number of your choice: ")
 
     chef = get_chef(choice)

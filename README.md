@@ -19,7 +19,7 @@ Before installing project dependencies, it's recommended to set up a Python virt
    If you don't have a virtual environment yet, create one by running:
 
    ```bash
-   python -m venv env
+   python3 -m venv env
    ```
 
    Activate the virtual environment:
@@ -27,7 +27,8 @@ Before installing project dependencies, it's recommended to set up a Python virt
     - On Unix/macOS, run:
 
       ```bash
-      source env/bin/activate
+      source .venv/bin/activate
+
       ```
 
     - On Windows, run:
@@ -45,6 +46,14 @@ Before installing project dependencies, it's recommended to set up a Python virt
    ```
 
    This command installs all the necessary packages as specified in the `requirements.txt` file, ensuring that you have the right versions needed for the project.
+  
+   pip freeze > requirements.txt to save the state environment
+   source .venv/bin/activate to activate virtual Environment 
+   pip install openai to install A packages
+   verify that openai is installed by running pip freeze again.
+
+
+
 
 ## Project Structure
 Below is the file and folder structure of the AI Chef Experience project:
@@ -56,6 +65,7 @@ ai_bootcamp_weekend_exercise
 ├── chefs/
 │   ├── italian_chef.py
 │   └── surinamese_chef.py
+│   └── Jamaica_chef.py
 ├── utils/
 │   ├── base_chef.py
 │   └── chef_interface.py

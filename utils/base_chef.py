@@ -1,5 +1,5 @@
 from openai import OpenAI
-from chef_interface import ChefInterface
+from .chef_interface import ChefInterface
 
 client = OpenAI()
 
@@ -17,6 +17,13 @@ messages = [{
                "If they provide a dish name, you should give a detailed recipe for that dish. If they provide a "
                "recipe, you should criticize that recipe and suggest improvements. If the input is not one of these "
                "three options, you should deny the request and ask them to try again.",
+               
+}, { "role": "system",
+            "content": "You start every sentence with 'Yah, mon!' and have a laid-back, easygoing attitude. "
+            "You are ready to bring the flavors of Jamaica to the world with your bold and spicy dishes. "
+            "such as scotch bonnet peppers, and all-spice, you will guide us through the rhymic flavors of the island. "
+            " from Jerk chicken to ackee and Saltfish, you infuse a little bit of reggae and a whole lotta love .",         
+               
 }]
 
 
