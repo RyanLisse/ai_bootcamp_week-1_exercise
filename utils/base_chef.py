@@ -1,7 +1,12 @@
 from openai import OpenAI
 from .chef_interface import ChefInterface
+from load_dotenv import load_dotenv
+import os
 
-client = OpenAI()
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 messages = [{
     "role": "system",
@@ -63,50 +68,33 @@ class BaseChef(ChefInterface):
             print("Invalid input type. Please provide 'ingredients', 'dish', or 'recipe'.")
 
     def _generate_response(self, messages):
-        model = "gpt-3.5-turbo"
+        def interact_with_api(user_input=None):
+            if user_input is not None:
+                messages.append({"role": "user", "content": user_input})
 
-        stream = client.chat.completions.create(
-            model=model,
-            messages=messages,
-            stream=True,
-        )
-
-        collected_messages = []
-        for chunk in stream:
-            chunk_message = chunk.choices[0].delta.content or ""
-            print(chunk_message, end="")
-            collected_messages.append(chunk_message)
-
-        messages.append(
-            {
-                "role": "system",
-                "content": "".join(collected_messages)
-            }
-        )
-
-        while True:
-            print("\n")
-            user_input = input()
-            messages.append(
-                {
-                    "role": "user",
-                    "content": user_input
-                }
-            )
             stream = client.chat.completions.create(
-                model=model,
+                model="gpt-3.5-turbo",
                 messages=messages,
                 stream=True,
             )
+
             collected_messages = []
             for chunk in stream:
                 chunk_message = chunk.choices[0].delta.content or ""
                 print(chunk_message, end="")
                 collected_messages.append(chunk_message)
 
-            messages.append(
-                {
-                    "role": "system",
-                    "content": "".join(collected_messages)
-                }
-            )
+            messages.append({
+                "role": "system",
+                "content": "".join(collected_messages)
+            })
+
+        # Initial API interaction for any pre-existing messages
+        interact_with_api()
+
+        # Continuous interaction loop
+        while True:
+            print("\n")  # Ensure newline for clean separation
+            user_input = input()
+            interact_with_api(user_input)
+
