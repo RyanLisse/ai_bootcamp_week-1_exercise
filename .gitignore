@@ -394,3 +394,7 @@ cython_debug/
 bin/
 include/
 lib/
+
+/bin
+/include
+/lib
