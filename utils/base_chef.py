@@ -1,11 +1,13 @@
 from openai import OpenAI
 from .chef_interface import ChefInterface
+
 from load_dotenv import load_dotenv
 import os
 
 
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 
 messages = [{
