@@ -8,8 +8,9 @@ chef_dict = {
     "1": {"class": SurinameseChef, "description": "Surinamese Chef"},
     "2": {"class": ItalianChef, "description": "Italian Chef"},
     "3": {"class": JamaicaChef, "description": "Jamaican Chef"},
-   "4": {"class": BrazilianChef, "description": "Brazilian Chef"},
-   "5": {"class": DutchChef, "description": "Dutch Chef"}
+    "4": {"class": BrazilianChef, "description": "Brazilian Chef"},
+    "5": {"class": DutchChef, "description": "Dutch Chef"}
+
 }
 
 def get_chef(choice):
