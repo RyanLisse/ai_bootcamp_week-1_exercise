@@ -7,7 +7,7 @@ chef_dict = {
     "1": {"class": SurinameseChef, "description": "Surinamese Chef"},
     "2": {"class": ItalianChef, "description": "Italian Chef"},
     "3": {"class": JamaicaChef, "description": "Jamaican Chef"},
-   "4": {"class": BrazilianChef, "description": "Brazilian Chef"}
+    "4": {"class": BrazilianChef, "description": "Brazilian Chef"}
 }
 
 def get_chef(choice):
@@ -41,7 +41,7 @@ def main():
 
     print("1. 🇸🇷 Surinamese Chef")
     print("2. 🇮🇹 Italian Chef")
-        print("3. 🇯🇲 Jamaican Chef")
+    print("3. 🇯🇲 Jamaican Chef")
     print("4. 🇧🇷 Brazilian Chef")
     choice = input("🔢 Enter the number of your choice: ")
 
