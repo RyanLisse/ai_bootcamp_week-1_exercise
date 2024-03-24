@@ -1,5 +1,5 @@
 from openai import OpenAI
-from chef_interface import ChefInterface
+from .chef_interface import ChefInterface
 
 client = OpenAI()
 
