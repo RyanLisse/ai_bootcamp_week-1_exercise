@@ -2,12 +2,15 @@ from chefs.surinamese_chef import SurinameseChef
 from chefs.italian_chef import ItalianChef
 from chefs.jamaica_chef import JamaicaChef
 from chefs.brazilian_chef import BrazilianChef
+from chefs.dutch_chef import DutchChef
 
 chef_dict = {
     "1": {"class": SurinameseChef, "description": "Surinamese Chef"},
     "2": {"class": ItalianChef, "description": "Italian Chef"},
     "3": {"class": JamaicaChef, "description": "Jamaican Chef"},
-    "4": {"class": BrazilianChef, "description": "Brazilian Chef"}
+    "4": {"class": BrazilianChef, "description": "Brazilian Chef"},
+    "5": {"class": DutchChef, "description": "Dutch Chef"}
+
 }
 
 def get_chef(choice):
@@ -19,10 +22,12 @@ def get_chef(choice):
         return SurinameseChef()
     elif choice == "2":
         return ItalianChef()
-       elif choice == "3":
+    elif choice == "3":
         return JamaicaChef()
     elif choice == "4":
         return BrazilianChef()
+    elif choice == "5":
+        return DutchChef()
     else:
         return None
 
@@ -43,6 +48,7 @@ def main():
     print("2. 🇮🇹 Italian Chef")
     print("3. 🇯🇲 Jamaican Chef")
     print("4. 🇧🇷 Brazilian Chef")
+    print("5. 🇳🇱 Dutch Chef")    
     choice = input("🔢 Enter the number of your choice: ")
 
     chef = get_chef(choice)
