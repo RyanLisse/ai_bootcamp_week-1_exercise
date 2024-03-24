@@ -1,4 +1,5 @@
 from chefs.surinamese_chef import SurinameseChef
+from chefs.dutch_chef import DutchChef
 from chefs.italian_chef import ItalianChef
 from chefs.brazilian_chef import BrazilianChef
 
@@ -8,6 +9,8 @@ def get_chef(choice):
         return SurinameseChef()
     elif choice == "2":
         return ItalianChef()
+    elif choice == "3":
+        return DutchChef()
     elif choice == "4":
         return BrazilianChef()
     else:

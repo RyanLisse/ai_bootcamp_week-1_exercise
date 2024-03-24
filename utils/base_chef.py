@@ -1,7 +1,10 @@
 from openai import OpenAI
 from .chef_interface import ChefInterface
+from dotenv import load_dotenv
+import os
 
-client = OpenAI()
+
+client = os.getenv("OPEN_AI_KEY")
 
 messages = [{
     "role": "system",
